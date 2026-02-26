@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= user.name %> Portfolio</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="portfolio">
+
+  <div class="profile">
+    <% if(user.photo){ %>
+      <img src="<%= user.photo %>" class="profile-pic">
+    <% } %>
+    <h1><%= user.name %></h1>
+  </div>
+
+  <div class="section">
+    <h2>About Me</h2>
+    <p><%= user.about %></p>
+  </div>
+
+  <div class="section">
+    <h2>My Skills</h2>
+    <ul>
+      <% user.skills.forEach(skill => { %>
+        <li><%= skill %></li>
+      <% }) %>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Projects</h2>
+    <ul>
+      <% user.projects.forEach(project => { %>
+        <li><%= project %></li>
+      <% }) %>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p><%= user.contact %></p>
+  </div>
+
+</div>
+
+</body>
+</html>
