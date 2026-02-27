@@ -23,7 +23,8 @@ mongoose
   });
 
 /* ------------------ Routes ------------------ */
-const portfolioRoutes = require("./routes/portfolio");
+/* ------------------ Routes ------------------ */
+const portfolioRoutes = require("./portfolio");
 app.use("/", portfolioRoutes);
 
 /* ------------------ Server ------------------ */
